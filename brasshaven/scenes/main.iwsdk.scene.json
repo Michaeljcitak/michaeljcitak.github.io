@@ -1,1 +1,4669 @@
-{"authoring": {"views": [{"fov": 62, "id": "hero", "position": [0, 1.7, 3], "projection": "perspective", "role": "hero", "target": [24, 9, -28]}, {"fov": 62, "id": "spawn", "position": [0, 1.6, 0], "projection": "perspective", "role": "diagnostic", "target": [0, 2.5, -20]}, {"fov": 50, "id": "quarter", "position": [64, 38, 58], "projection": "perspective", "role": "diagnostic", "target": [0, 3, -12]}, {"fov": 50, "id": "tower-close", "position": [22, 3, 2], "projection": "perspective", "role": "diagnostic", "target": [36, 15, -16]}, {"height": 150, "id": "top", "position": [0, 130, -16], "projection": "orthographic", "role": "diagnostic", "target": [0, 0, -16]}]}, "components": {"com.iwsdk.components.DomeGradient": {"azimuthDeg": -31, "dither": true, "elevationDeg": 16, "equator": [0.13, 0.27, 0.33, 1], "ground": [0.03, 0.04, 0.06, 1], "sky": [0.045, 0.085, 0.16, 1]}, "com.iwsdk.components.IBLGradient": {"equator": [0.16, 0.24, 0.28, 1], "ground": [0.05, 0.06, 0.08, 1], "intensity": 0.7, "sky": [0.2, 0.28, 0.36, 1]}}, "environment": {"exposure": 1.15, "shadowMapType": "pcf", "shadows": true, "toneMapping": "aces"}, "nodes": [{"content": {"asset": "harbor-water", "type": "asset"}, "framingRole": "support", "id": "water", "name": "Harbor Water", "transform": {"position": [0, -1.4, -30]}}, {"components": {"LocomotionEnvironment": {}}, "content": {"asset": "harbor-ground", "receiveShadow": true, "type": "asset"}, "framingRole": "support", "id": "ground", "name": "Town Terrace and Quay", "transform": {"position": [0, 0, 20]}}, {"components": {"LocomotionEnvironment": {}}, "content": {"asset": "tower-pier", "castShadow": true, "receiveShadow": true, "type": "asset"}, "id": "tower-pier", "name": "Great Tower Pier", "transform": {"position": [36, 0, -16]}}, {"components": {"LocomotionEnvironment": {}}, "content": {"asset": "harbor-pier", "castShadow": true, "receiveShadow": true, "type": "asset"}, "id": "pier-west", "name": "West Pier", "transform": {"position": [-24, 0, -8]}}, {"components": {"LocomotionEnvironment": {}}, "content": {"asset": "harbor-pier", "castShadow": true, "receiveShadow": true, "type": "asset"}, "id": "pier-center", "name": "Center Pier", "transform": {"position": [0, 0, -8]}}, {"components": {"LocomotionEnvironment": {}}, "content": {"asset": "harbor-pier", "castShadow": true, "receiveShadow": true, "type": "asset"}, "id": "pier-east", "name": "East Pier", "transform": {"position": [24, 0, -8]}}, {"content": {"asset": "great-tower", "castShadow": true, "receiveShadow": true, "type": "asset"}, "id": "great-tower", "name": "The Great Clockwork Tower", "transform": {"position": [36, 0, -16]}}, {"content": {"asset": "clock-tower", "castShadow": true, "receiveShadow": true, "type": "asset"}, "id": "clock-tower", "name": "Town Clock Tower", "transform": {"position": [-36, 0, 22]}}, {"content": {"asset": "warehouse-a", "castShadow": true, "receiveShadow": true, "type": "asset"}, "id": "warehouse-a1", "name": "Domed Warehouse West", "transform": {"position": [-44, 0, 16]}}, {"content": {"asset": "warehouse-b", "castShadow": true, "receiveShadow": true, "type": "asset"}, "id": "warehouse-b1", "name": "Gabled Warehouse West", "transform": {"position": [-27, 0, 17], "rotationDeg": [0, 4, 0]}}, {"content": {"asset": "warehouse-a", "castShadow": true, "receiveShadow": true, "type": "asset"}, "id": "warehouse-a2", "name": "Domed Warehouse Center", "transform": {"position": [-9, 0, 16], "scale": 1.12}}, {"content": {"asset": "market-hall", "castShadow": true, "receiveShadow": true, "type": "asset"}, "id": "market-hall", "name": "Fish Market Hall", "transform": {"position": [15, 0, 16]}}, {"content": {"asset": "warehouse-b", "castShadow": true, "receiveShadow": true, "type": "asset"}, "id": "warehouse-b2", "name": "Gabled Warehouse East", "transform": {"position": [38, 0, 17], "rotationDeg": [0, -5, 0]}}, {"content": {"asset": "warehouse-b", "castShadow": true, "type": "asset"}, "id": "warehouse-b3", "name": "Back Row Warehouse West", "transform": {"position": [-40, 0, 36], "scale": 1.35}}, {"content": {"asset": "warehouse-a", "castShadow": true, "type": "asset"}, "id": "warehouse-a3", "name": "Back Row Domed West", "transform": {"position": [-15, 0, 37], "scale": 1.28}}, {"content": {"asset": "warehouse-a", "castShadow": true, "type": "asset"}, "id": "warehouse-a4", "name": "Back Row Domed East", "transform": {"position": [12, 0, 37], "scale": 1.4}}, {"content": {"asset": "warehouse-b", "castShadow": true, "type": "asset"}, "id": "warehouse-b4", "name": "Back Row Warehouse East", "transform": {"position": [36, 0, 36], "rotationDeg": [0, 3, 0], "scale": 1.3}}, {"content": {"asset": "boat", "castShadow": true, "type": "asset"}, "id": "boat-1", "name": "Moored Boat West Pier", "transform": {"position": [-21.6, -1.15, -20], "rotationDeg": [0, 10, 0]}}, {"content": {"asset": "boat", "castShadow": true, "type": "asset"}, "id": "boat-2", "name": "Moored Boat East", "transform": {"position": [27.5, -1.15, -14], "rotationDeg": [0, -14, 0], "scale": 1.25}}, {"content": {"asset": "boat", "type": "asset"}, "id": "boat-3", "name": "Moored Boat Center", "transform": {"position": [-2.8, -1.15, -24], "rotationDeg": [0, 24, 0], "scale": 0.9}}, {"content": {"asset": "boat", "type": "asset"}, "id": "boat-4", "name": "Moored Boat East Pier", "transform": {"position": [21, -1.15, -22], "rotationDeg": [0, -30, 0], "scale": 0.85}}, {"content": {"asset": "boat", "type": "asset"}, "id": "boat-5", "name": "Anchored Boat Basin", "transform": {"position": [-40, -1.15, -32], "rotationDeg": [0, 45, 0], "scale": 1.1}}, {"content": {"asset": "crane", "castShadow": true, "type": "asset"}, "id": "crane-1", "name": "Quay Crane West", "transform": {"position": [-12, 0, -6.5]}}, {"content": {"asset": "crane", "castShadow": true, "type": "asset"}, "id": "crane-2", "name": "Quay Crane East", "transform": {"position": [30, 0, -6.5], "rotationDeg": [0, -12, 0]}}, {"components": {"LocomotionEnvironment": {}}, "content": {"asset": "breakwater", "castShadow": true, "receiveShadow": true, "type": "asset"}, "id": "breakwater-west", "name": "West Breakwater", "transform": {"position": [-40, 0, -46], "rotationDeg": [0, 28, 0]}}, {"components": {"LocomotionEnvironment": {}}, "content": {"asset": "breakwater", "castShadow": true, "receiveShadow": true, "type": "asset"}, "id": "breakwater-east", "name": "East Breakwater", "transform": {"position": [40, 0, -46], "rotationDeg": [0, -28, 0]}}, {"content": {"asset": "lighthouse-point", "castShadow": true, "type": "asset"}, "id": "lighthouse-point", "name": "Lighthouse Point", "transform": {"position": [50, -1.2, -72], "rotationDeg": [0, -20, 0]}}, {"content": {"asset": "harbor-backdrop", "type": "asset"}, "framingRole": "support", "id": "backdrop", "name": "Far Shore Silhouette", "transform": {"position": [0, 0, -112]}}, {"content": {"asset": "lantern", "type": "asset"}, "id": "lantern-q1", "name": "Quay Lantern", "transform": {"position": [-48, 0, -6.8]}}, {"content": {"asset": "lantern", "type": "asset"}, "id": "lantern-q2", "name": "Quay Lantern", "transform": {"position": [-32, 0, -6.8]}}, {"content": {"asset": "lantern", "type": "asset"}, "id": "lantern-q3", "name": "Quay Lantern", "transform": {"position": [-16, 0, -6.8]}}, {"content": {"asset": "lantern", "type": "asset"}, "id": "lantern-q4", "name": "Quay Lantern", "transform": {"position": [4.5, 0, -6.8]}}, {"content": {"asset": "lantern", "type": "asset"}, "id": "lantern-q5", "name": "Quay Lantern", "transform": {"position": [16, 0, -6.8]}}, {"content": {"asset": "lantern", "type": "asset"}, "id": "lantern-q6", "name": "Quay Lantern", "transform": {"position": [32, 0, -6.8]}}, {"content": {"asset": "lantern", "type": "asset"}, "id": "lantern-q7", "name": "Quay Lantern", "transform": {"position": [48, 0, -6.8]}}, {"content": {"asset": "lantern", "type": "asset"}, "id": "lantern-p1", "name": "Pier End Lantern", "transform": {"position": [-24, 0, -25.2]}}, {"content": {"asset": "lantern", "type": "asset"}, "id": "lantern-p2", "name": "Pier End Lantern", "transform": {"position": [0, 0, -25.2]}}, {"content": {"asset": "lantern", "type": "asset"}, "id": "lantern-p3", "name": "Pier End Lantern", "transform": {"position": [24, 0, -25.2]}}, {"content": {"asset": "lantern", "type": "asset"}, "id": "lantern-t1", "name": "Tower Pier Lantern", "transform": {"position": [28.5, 0, -22.5]}}, {"content": {"asset": "lantern", "type": "asset"}, "id": "lantern-t2", "name": "Tower Pier Lantern", "transform": {"position": [43.5, 0, -9.5]}}, {"content": {"asset": "lantern", "type": "asset"}, "id": "lantern-bw1", "name": "Breakwater Lantern", "transform": {"position": [-54, 0.72, -37]}}, {"content": {"asset": "lantern", "type": "asset"}, "id": "lantern-bw2", "name": "Breakwater Lantern", "transform": {"position": [-33, 0.72, -53]}}, {"content": {"asset": "lantern", "type": "asset"}, "id": "lantern-bw3", "name": "Breakwater Lantern", "transform": {"position": [54, 0.72, -37]}}, {"content": {"asset": "lantern", "type": "asset"}, "id": "lantern-bw4", "name": "Breakwater Lantern", "transform": {"position": [33, 0.72, -53]}}, {"components": {"DirectionalLight": {"castShadow": true, "color": [1, 0.74, 0.47, 1], "intensity": 1.7, "shadowBias": -0.0004, "shadowCameraFar": 170, "shadowCameraNear": 4, "shadowCameraSize": 95, "shadowMapSize": "2048", "shadowNormalBias": 0.03, "shadowRadius": 6}}, "id": "key-light", "name": "Dusk Key Light", "transform": {"position": [-45, 34, 20], "rotationDeg": [-58, -32, 0]}}, {"components": {"HemisphereLight": {"groundColor": [0.08, 0.09, 0.11, 1], "intensity": 0.5, "skyColor": [0.36, 0.5, 0.62, 1]}}, "id": "fill-light", "name": "Dusk Fill"}, {"components": {"PointLight": {"color": [1, 0.72, 0.42, 1], "decay": 2, "distance": 48, "intensity": 150}}, "id": "point-tower", "name": "Tower Glow", "transform": {"position": [36, 24, -10]}}, {"components": {"PointLight": {"color": [1, 0.72, 0.42, 1], "decay": 2, "distance": 36, "intensity": 45}}, "id": "point-quay", "name": "Quay Glow", "transform": {"position": [0, 5, -6]}}, {"components": {"PointLight": {"color": [1, 0.76, 0.46, 1], "decay": 2, "distance": 30, "intensity": 60}}, "id": "point-market", "name": "Market Glow", "transform": {"position": [15, 4.4, 10]}}], "resources": {}, "units": "meters", "version": "iwsdk.scene.v1"}
+{
+ "version": "iwsdk.scene.v1",
+ "units": "meters",
+ "components": {
+  "com.iwsdk.components.DomeGradient": {
+   "sky": [
+    0.045,
+    0.085,
+    0.16,
+    1
+   ],
+   "equator": [
+    0.13,
+    0.27,
+    0.33,
+    1
+   ],
+   "ground": [
+    0.03,
+    0.04,
+    0.06,
+    1
+   ],
+   "elevationDeg": 16,
+   "azimuthDeg": -31,
+   "dither": true
+  },
+  "com.iwsdk.components.IBLGradient": {
+   "sky": [
+    0.2,
+    0.28,
+    0.36,
+    1
+   ],
+   "equator": [
+    0.16,
+    0.24,
+    0.28,
+    1
+   ],
+   "ground": [
+    0.05,
+    0.06,
+    0.08,
+    1
+   ],
+   "intensity": 0.7
+  }
+ },
+ "environment": {
+  "toneMapping": "aces",
+  "exposure": 1.15,
+  "shadows": true,
+  "shadowMapType": "pcf"
+ },
+ "resources": {},
+ "authoring": {
+  "views": [
+   {
+    "id": "hero",
+    "role": "hero",
+    "projection": "perspective",
+    "position": [
+     0,
+     1.7,
+     3
+    ],
+    "target": [
+     24,
+     9,
+     -28
+    ],
+    "fov": 62
+   },
+   {
+    "id": "spawn",
+    "role": "diagnostic",
+    "projection": "perspective",
+    "position": [
+     0,
+     1.6,
+     0
+    ],
+    "target": [
+     0,
+     2.5,
+     -20
+    ],
+    "fov": 62
+   },
+   {
+    "id": "quarter",
+    "role": "diagnostic",
+    "projection": "perspective",
+    "position": [
+     64,
+     38,
+     58
+    ],
+    "target": [
+     0,
+     3,
+     -12
+    ],
+    "fov": 50
+   },
+   {
+    "id": "tower-close",
+    "role": "diagnostic",
+    "projection": "perspective",
+    "position": [
+     22,
+     3,
+     2
+    ],
+    "target": [
+     36,
+     15,
+     -16
+    ],
+    "fov": 50
+   },
+   {
+    "id": "tower-inside",
+    "role": "diagnostic",
+    "projection": "perspective",
+    "position": [
+     33.4,
+     1.7,
+     -16
+    ],
+    "target": [
+     37,
+     9.5,
+     -16
+    ],
+    "fov": 68
+   },
+   {
+    "id": "market-inside",
+    "role": "diagnostic",
+    "projection": "perspective",
+    "position": [
+     15,
+     1.8,
+     19.5
+    ],
+    "target": [
+     14,
+     1.1,
+     12.5
+    ],
+    "fov": 58
+   },
+   {
+    "id": "ship-deck",
+    "role": "diagnostic",
+    "projection": "perspective",
+    "position": [
+     -31,
+     3.6,
+     -27
+    ],
+    "target": [
+     -31,
+     2,
+     -6
+    ],
+    "fov": 58
+   },
+   {
+    "id": "top",
+    "role": "diagnostic",
+    "projection": "orthographic",
+    "position": [
+     0,
+     130,
+     -16
+    ],
+    "target": [
+     0,
+     0,
+     -16
+    ],
+    "height": 150
+   }
+  ]
+ },
+ "nodes": [
+  {
+   "id": "water",
+   "name": "Harbor Water",
+   "framingRole": "support",
+   "content": {
+    "type": "asset",
+    "asset": "harbor-water"
+   },
+   "transform": {
+    "position": [
+     0,
+     -1.4,
+     -30
+    ]
+   }
+  },
+  {
+   "id": "harbor-bottom",
+   "name": "Harbor Bottom (wading floor)",
+   "framingRole": "support",
+   "content": {
+    "type": "asset",
+    "asset": "harbor-bottom"
+   },
+   "transform": {
+    "position": [
+     0,
+     -2.0,
+     -40
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "harbor-bottom-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        400,
+        0.5,
+        300
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -0.25,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "ground",
+   "name": "Town Terrace and Quay",
+   "framingRole": "support",
+   "content": {
+    "type": "asset",
+    "asset": "harbor-ground",
+    "receiveShadow": true
+   },
+   "transform": {
+    "position": [
+     0,
+     0,
+     20
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "ground-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        120,
+        1.4,
+        56
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -0.7,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "tower-pier",
+   "name": "Great Tower Pier",
+   "content": {
+    "type": "asset",
+    "asset": "tower-pier",
+    "castShadow": true,
+    "receiveShadow": true
+   },
+   "transform": {
+    "position": [
+     36,
+     0,
+     -16
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "tower-pier-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        18,
+        1.6,
+        16
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -0.8,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "pier-west",
+   "name": "Dock Pier",
+   "content": {
+    "type": "asset",
+    "asset": "harbor-pier",
+    "castShadow": true,
+    "receiveShadow": true
+   },
+   "transform": {
+    "position": [
+     -24,
+     0,
+     -8
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "pier-west-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        4.4,
+        0.24,
+        18
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -0.12,
+       -9
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "pier-center",
+   "name": "Dock Pier",
+   "content": {
+    "type": "asset",
+    "asset": "harbor-pier",
+    "castShadow": true,
+    "receiveShadow": true
+   },
+   "transform": {
+    "position": [
+     0,
+     0,
+     -8
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "pier-center-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        4.4,
+        0.24,
+        18
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -0.12,
+       -9
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "pier-east",
+   "name": "Dock Pier",
+   "content": {
+    "type": "asset",
+    "asset": "harbor-pier",
+    "castShadow": true,
+    "receiveShadow": true
+   },
+   "transform": {
+    "position": [
+     24,
+     0,
+     -8
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "pier-east-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        4.4,
+        0.24,
+        18
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -0.12,
+       -9
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "ramp-west",
+   "name": "Water Exit Ramp",
+   "content": {
+    "type": "asset",
+    "asset": "water-ramp",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     -24,
+     0,
+     -26.2
+    ],
+    "rotationDeg": [
+     0,
+     180,
+     0
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "ramp-west-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.6,
+        0.12,
+        5.1
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -1,
+       -2.25
+      ],
+      "rotationDeg": [
+       24,
+       0,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "ramp-center",
+   "name": "Water Exit Ramp",
+   "content": {
+    "type": "asset",
+    "asset": "water-ramp",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     0,
+     0,
+     -26.2
+    ],
+    "rotationDeg": [
+     0,
+     180,
+     0
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "ramp-center-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.6,
+        0.12,
+        5.1
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -1,
+       -2.25
+      ],
+      "rotationDeg": [
+       24,
+       0,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "ramp-east",
+   "name": "Water Exit Ramp",
+   "content": {
+    "type": "asset",
+    "asset": "water-ramp",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     24,
+     0,
+     -26.2
+    ],
+    "rotationDeg": [
+     0,
+     180,
+     0
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "ramp-east-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.6,
+        0.12,
+        5.1
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -1,
+       -2.25
+      ],
+      "rotationDeg": [
+       24,
+       0,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "clock-tower",
+   "name": "Town Clock Tower",
+   "content": {
+    "type": "asset",
+    "asset": "clock-tower",
+    "castShadow": true,
+    "receiveShadow": true
+   },
+   "transform": {
+    "position": [
+     -36,
+     0,
+     22
+    ]
+   },
+   "children": [
+    {
+     "id": "clock-tower-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        5,
+        13,
+        5
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       6.5,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "warehouse-a1",
+   "name": "Domed Warehouse (enterable)",
+   "content": {
+    "type": "asset",
+    "asset": "warehouse-a",
+    "castShadow": true,
+    "receiveShadow": true
+   },
+   "transform": {
+    "position": [
+     -44,
+     0,
+     16
+    ]
+   },
+   "children": [
+    {
+     "id": "wa-wall-fl",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        6.1,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -3.95,
+       4,
+       -5
+      ]
+     }
+    },
+    {
+     "id": "wa-wall-fr",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        6.1,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       3.95,
+       4,
+       -5
+      ]
+     }
+    },
+    {
+     "id": "wa-wall-lintel",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.8,
+        5.4,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       5.3,
+       -5
+      ]
+     }
+    },
+    {
+     "id": "wa-wall-back",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        14,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       4,
+       5
+      ]
+     }
+    },
+    {
+     "id": "wa-wall-left",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        0.25,
+        8,
+        10
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -7,
+       4,
+       0
+      ]
+     }
+    },
+    {
+     "id": "wa-wall-right",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        0.25,
+        8,
+        10
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       7,
+       4,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "warehouse-b1",
+   "name": "Gabled Warehouse West",
+   "content": {
+    "type": "asset",
+    "asset": "warehouse-b",
+    "castShadow": true,
+    "receiveShadow": true
+   },
+   "transform": {
+    "position": [
+     -27,
+     0,
+     17
+    ],
+    "rotationDeg": [
+     0,
+     4,
+     0
+    ]
+   },
+   "children": [
+    {
+     "id": "wb1-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        12,
+        7,
+        9
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       3.5,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "warehouse-a2",
+   "name": "Domed Warehouse Center",
+   "content": {
+    "type": "asset",
+    "asset": "warehouse-a",
+    "castShadow": true,
+    "receiveShadow": true
+   },
+   "transform": {
+    "position": [
+     -9,
+     0,
+     16
+    ],
+    "scale": 1.12
+   },
+   "children": [
+    {
+     "id": "wa2-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        14,
+        8,
+        10
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       4,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "market-hall",
+   "name": "Fish Market Hall (open)",
+   "content": {
+    "type": "asset",
+    "asset": "market-hall",
+    "castShadow": true,
+    "receiveShadow": true
+   },
+   "transform": {
+    "position": [
+     15,
+     0,
+     16
+    ]
+   },
+   "children": [
+    {
+     "id": "mh-wall-back",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        22,
+        5.5,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       2.75,
+       4.5
+      ]
+     }
+    },
+    {
+     "id": "mh-wall-left",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        0.25,
+        5.5,
+        9
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -11,
+       2.75,
+       0
+      ]
+     }
+    },
+    {
+     "id": "mh-wall-right",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        0.25,
+        5.5,
+        9
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       11,
+       2.75,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "warehouse-b2",
+   "name": "Gabled Warehouse East",
+   "content": {
+    "type": "asset",
+    "asset": "warehouse-b",
+    "castShadow": true,
+    "receiveShadow": true
+   },
+   "transform": {
+    "position": [
+     38,
+     0,
+     17
+    ],
+    "rotationDeg": [
+     0,
+     -5,
+     0
+    ]
+   },
+   "children": [
+    {
+     "id": "wb2-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        12,
+        7,
+        9
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       3.5,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "warehouse-b3",
+   "name": "Back Row Warehouse West",
+   "content": {
+    "type": "asset",
+    "asset": "warehouse-b",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     -40,
+     0,
+     36
+    ],
+    "scale": 1.35
+   },
+   "children": [
+    {
+     "id": "wb3-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        12,
+        7,
+        9
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       3.5,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "warehouse-a3",
+   "name": "Back Row Domed West",
+   "content": {
+    "type": "asset",
+    "asset": "warehouse-a",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     -15,
+     0,
+     37
+    ],
+    "scale": 1.28
+   },
+   "children": [
+    {
+     "id": "wa3-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        14,
+        8,
+        10
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       4,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "warehouse-a4",
+   "name": "Back Row Domed East",
+   "content": {
+    "type": "asset",
+    "asset": "warehouse-a",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     12,
+     0,
+     37
+    ],
+    "scale": 1.4
+   },
+   "children": [
+    {
+     "id": "wa4-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        14,
+        8,
+        10
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       4,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "warehouse-b4",
+   "name": "Back Row Warehouse East",
+   "content": {
+    "type": "asset",
+    "asset": "warehouse-b",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     36,
+     0,
+     36
+    ],
+    "rotationDeg": [
+     0,
+     3,
+     0
+    ],
+    "scale": 1.3
+   },
+   "children": [
+    {
+     "id": "wb4-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        12,
+        7,
+        9
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       3.5,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "prop-crate-1",
+   "name": "Crate",
+   "content": {
+    "type": "asset",
+    "asset": "crate",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     8,
+     0,
+     -3
+    ],
+    "rotationDeg": [
+     0,
+     20,
+     0
+    ]
+   }
+  },
+  {
+   "id": "prop-barrel-1",
+   "name": "Barrel",
+   "content": {
+    "type": "asset",
+    "asset": "barrel",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     8.9,
+     0,
+     -3.4
+    ]
+   }
+  },
+  {
+   "id": "prop-crate-2",
+   "name": "Crate",
+   "content": {
+    "type": "asset",
+    "asset": "crate",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     -18,
+     0,
+     8
+    ],
+    "rotationDeg": [
+     0,
+     -15,
+     0
+    ]
+   }
+  },
+  {
+   "id": "prop-crate-3",
+   "name": "Crate",
+   "content": {
+    "type": "asset",
+    "asset": "crate",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     -17.9,
+     0.92,
+     8.1
+    ],
+    "rotationDeg": [
+     0,
+     25,
+     0
+    ]
+   }
+  },
+  {
+   "id": "prop-crate-4",
+   "name": "Crate",
+   "content": {
+    "type": "asset",
+    "asset": "crate",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     30,
+     0,
+     -10
+    ],
+    "rotationDeg": [
+     0,
+     40,
+     0
+    ]
+   }
+  },
+  {
+   "id": "prop-barrel-2",
+   "name": "Barrel",
+   "content": {
+    "type": "asset",
+    "asset": "barrel",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     -30.5,
+     0,
+     -11.5
+    ]
+   }
+  },
+  {
+   "id": "crane-1",
+   "name": "Quay Crane West",
+   "content": {
+    "type": "asset",
+    "asset": "crane",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     -12,
+     0,
+     -6.5
+    ]
+   },
+   "children": [
+    {
+     "id": "crane-1-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        0.7,
+        7.5,
+        0.7
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       3.75,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "crane-2",
+   "name": "Quay Crane East",
+   "content": {
+    "type": "asset",
+    "asset": "crane",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     30,
+     0,
+     -6.5
+    ],
+    "rotationDeg": [
+     0,
+     -12,
+     0
+    ]
+   },
+   "children": [
+    {
+     "id": "crane-2-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        0.7,
+        7.5,
+        0.7
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       3.75,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "boat-1",
+   "name": "Moored Boat West Pier",
+   "content": {
+    "type": "asset",
+    "asset": "boat",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     -21.6,
+     -1.15,
+     -20
+    ],
+    "rotationDeg": [
+     0,
+     10,
+     0
+    ]
+   }
+  },
+  {
+   "id": "boat-2",
+   "name": "Moored Boat East",
+   "content": {
+    "type": "asset",
+    "asset": "boat",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     27.5,
+     -1.15,
+     -14
+    ],
+    "rotationDeg": [
+     0,
+     -14,
+     0
+    ],
+    "scale": 1.25
+   }
+  },
+  {
+   "id": "boat-4",
+   "name": "Moored Boat East Pier",
+   "content": {
+    "type": "asset",
+    "asset": "boat"
+   },
+   "transform": {
+    "position": [
+     21,
+     -1.15,
+     -22
+    ],
+    "rotationDeg": [
+     0,
+     -30,
+     0
+    ],
+    "scale": 0.85
+   }
+  },
+  {
+   "id": "boat-5",
+   "name": "Anchored Boat Basin",
+   "content": {
+    "type": "asset",
+    "asset": "boat"
+   },
+   "transform": {
+    "position": [
+     -40,
+     -1.15,
+     -32
+    ],
+    "rotationDeg": [
+     0,
+     45,
+     0
+    ],
+    "scale": 1.1
+   }
+  },
+  {
+   "id": "breakwater-west",
+   "name": "Breakwater",
+   "content": {
+    "type": "asset",
+    "asset": "breakwater",
+    "castShadow": true,
+    "receiveShadow": true
+   },
+   "transform": {
+    "position": [
+     -40,
+     0,
+     -46
+    ],
+    "rotationDeg": [
+     0,
+     28,
+     0
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "breakwater-west-cap",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        48,
+        0.35,
+        5.8
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       0.55,
+       0
+      ]
+     }
+    },
+    {
+     "id": "breakwater-west-base",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        48,
+        3,
+        5.4
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -1.1,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "breakwater-east",
+   "name": "Breakwater",
+   "content": {
+    "type": "asset",
+    "asset": "breakwater",
+    "castShadow": true,
+    "receiveShadow": true
+   },
+   "transform": {
+    "position": [
+     40,
+     0,
+     -46
+    ],
+    "rotationDeg": [
+     0,
+     -28,
+     0
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "breakwater-east-cap",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        48,
+        0.35,
+        5.8
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       0.55,
+       0
+      ]
+     }
+    },
+    {
+     "id": "breakwater-east-base",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        48,
+        3,
+        5.4
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -1.1,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "lighthouse-point",
+   "name": "Lighthouse Point",
+   "content": {
+    "type": "asset",
+    "asset": "lighthouse-point",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     50,
+     -1.2,
+     -72
+    ],
+    "rotationDeg": [
+     0,
+     -20,
+     0
+    ]
+   },
+   "children": [
+    {
+     "id": "lighthouse-rock",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        11,
+        13,
+        9
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       4.5,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "jetty",
+   "name": "Lighthouse Jetty",
+   "content": {
+    "type": "asset",
+    "asset": "jetty",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     40,
+     -0.5,
+     -60
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "jetty-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        4.2,
+        1,
+        3.2
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -0.5,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "backdrop",
+   "name": "Far Shore Silhouette",
+   "framingRole": "support",
+   "content": {
+    "type": "asset",
+    "asset": "harbor-backdrop"
+   },
+   "transform": {
+    "position": [
+     0,
+     0,
+     -112
+    ]
+   }
+  },
+  {
+   "id": "lantern-q1",
+   "name": "Lantern",
+   "content": {
+    "type": "asset",
+    "asset": "lantern"
+   },
+   "transform": {
+    "position": [
+     -48,
+     0,
+     -6.8
+    ]
+   }
+  },
+  {
+   "id": "lantern-q2",
+   "name": "Lantern",
+   "content": {
+    "type": "asset",
+    "asset": "lantern"
+   },
+   "transform": {
+    "position": [
+     -32,
+     0,
+     -6.8
+    ]
+   }
+  },
+  {
+   "id": "lantern-q3",
+   "name": "Lantern",
+   "content": {
+    "type": "asset",
+    "asset": "lantern"
+   },
+   "transform": {
+    "position": [
+     -16,
+     0,
+     -6.8
+    ]
+   }
+  },
+  {
+   "id": "lantern-q4",
+   "name": "Lantern",
+   "content": {
+    "type": "asset",
+    "asset": "lantern"
+   },
+   "transform": {
+    "position": [
+     4.5,
+     0,
+     -6.8
+    ]
+   }
+  },
+  {
+   "id": "lantern-q5",
+   "name": "Lantern",
+   "content": {
+    "type": "asset",
+    "asset": "lantern"
+   },
+   "transform": {
+    "position": [
+     16,
+     0,
+     -6.8
+    ]
+   }
+  },
+  {
+   "id": "lantern-q6",
+   "name": "Lantern",
+   "content": {
+    "type": "asset",
+    "asset": "lantern"
+   },
+   "transform": {
+    "position": [
+     32,
+     0,
+     -6.8
+    ]
+   }
+  },
+  {
+   "id": "lantern-q7",
+   "name": "Lantern",
+   "content": {
+    "type": "asset",
+    "asset": "lantern"
+   },
+   "transform": {
+    "position": [
+     48,
+     0,
+     -6.8
+    ]
+   }
+  },
+  {
+   "id": "lantern-p1",
+   "name": "Lantern",
+   "content": {
+    "type": "asset",
+    "asset": "lantern"
+   },
+   "transform": {
+    "position": [
+     -24,
+     0,
+     -25.2
+    ]
+   }
+  },
+  {
+   "id": "lantern-p2",
+   "name": "Lantern",
+   "content": {
+    "type": "asset",
+    "asset": "lantern"
+   },
+   "transform": {
+    "position": [
+     0,
+     0,
+     -25.2
+    ]
+   }
+  },
+  {
+   "id": "lantern-p3",
+   "name": "Lantern",
+   "content": {
+    "type": "asset",
+    "asset": "lantern"
+   },
+   "transform": {
+    "position": [
+     24,
+     0,
+     -25.2
+    ]
+   }
+  },
+  {
+   "id": "lantern-t1",
+   "name": "Lantern",
+   "content": {
+    "type": "asset",
+    "asset": "lantern"
+   },
+   "transform": {
+    "position": [
+     28.5,
+     0,
+     -22.5
+    ]
+   }
+  },
+  {
+   "id": "lantern-t2",
+   "name": "Lantern",
+   "content": {
+    "type": "asset",
+    "asset": "lantern"
+   },
+   "transform": {
+    "position": [
+     43.5,
+     0,
+     -9.5
+    ]
+   }
+  },
+  {
+   "id": "lantern-bw1",
+   "name": "Lantern",
+   "content": {
+    "type": "asset",
+    "asset": "lantern"
+   },
+   "transform": {
+    "position": [
+     -54,
+     0.72,
+     -37
+    ]
+   }
+  },
+  {
+   "id": "lantern-bw2",
+   "name": "Lantern",
+   "content": {
+    "type": "asset",
+    "asset": "lantern"
+   },
+   "transform": {
+    "position": [
+     -33,
+     0.72,
+     -53
+    ]
+   }
+  },
+  {
+   "id": "lantern-bw3",
+   "name": "Lantern",
+   "content": {
+    "type": "asset",
+    "asset": "lantern"
+   },
+   "transform": {
+    "position": [
+     54,
+     0.72,
+     -37
+    ]
+   }
+  },
+  {
+   "id": "lantern-bw4",
+   "name": "Lantern",
+   "content": {
+    "type": "asset",
+    "asset": "lantern"
+   },
+   "transform": {
+    "position": [
+     33,
+     0.72,
+     -53
+    ]
+   }
+  },
+  {
+   "id": "tally-panel",
+   "name": "Harbor Tally",
+   "content": {
+    "type": "asset",
+    "asset": "tally-panel"
+   },
+   "transform": {
+    "position": [
+     0,
+     1.85,
+     -4.4
+    ]
+   },
+   "components": {
+    "Tally": {},
+    "RayInteractable": {},
+    "AudioSource": {
+     "src": "./audio/chime.mp3",
+     "maxInstances": 3,
+     "playbackMode": "fade-restart"
+    }
+   }
+  },
+  {
+   "id": "tower-shell",
+   "name": "The Great Clockwork Tower",
+   "content": {
+    "type": "asset",
+    "asset": "tower-shell",
+    "castShadow": true,
+    "receiveShadow": true
+   },
+   "transform": {
+    "position": [
+     36,
+     0,
+     -16
+    ]
+   },
+   "children": [
+    {
+     "id": "tower-base-0",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        3.1,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       4.35,
+       4,
+       0.0
+      ],
+      "rotationDeg": [
+       0,
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-base-45",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        3.1,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       3.076,
+       4,
+       3.076
+      ],
+      "rotationDeg": [
+       0,
+       -135,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-base-90",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        3.1,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0.0,
+       4,
+       4.35
+      ],
+      "rotationDeg": [
+       0,
+       -180,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-base-135",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        3.1,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -3.076,
+       4,
+       3.076
+      ],
+      "rotationDeg": [
+       0,
+       -225,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-base-225",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        3.1,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -3.076,
+       4,
+       -3.076
+      ],
+      "rotationDeg": [
+       0,
+       -315,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-base-270",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        3.1,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -0.0,
+       4,
+       -4.35
+      ],
+      "rotationDeg": [
+       0,
+       -360,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-base-315",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        3.1,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       3.076,
+       4,
+       -3.076
+      ],
+      "rotationDeg": [
+       0,
+       -405,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-mid-0",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        2.7,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       3.45,
+       12.5,
+       0.0
+      ],
+      "rotationDeg": [
+       0,
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-mid-45",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        2.7,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       2.44,
+       12.5,
+       2.44
+      ],
+      "rotationDeg": [
+       0,
+       -135,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-mid-90",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        2.7,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0.0,
+       12.5,
+       3.45
+      ],
+      "rotationDeg": [
+       0,
+       -180,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-mid-135",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        2.7,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -2.44,
+       12.5,
+       2.44
+      ],
+      "rotationDeg": [
+       0,
+       -225,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-mid-180",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        2.7,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -3.45,
+       12.5,
+       0.0
+      ],
+      "rotationDeg": [
+       0,
+       -270,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-mid-225",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        2.7,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -2.44,
+       12.5,
+       -2.44
+      ],
+      "rotationDeg": [
+       0,
+       -315,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-mid-270",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        2.7,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -0.0,
+       12.5,
+       -3.45
+      ],
+      "rotationDeg": [
+       0,
+       -360,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-mid-315",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        2.7,
+        8,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       2.44,
+       12.5,
+       -2.44
+      ],
+      "rotationDeg": [
+       0,
+       -405,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-upper-0",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        2.0,
+        6,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       2.62,
+       19.5,
+       0.0
+      ],
+      "rotationDeg": [
+       0,
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-upper-45",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        2.0,
+        6,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       1.853,
+       19.5,
+       1.853
+      ],
+      "rotationDeg": [
+       0,
+       -135,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-upper-90",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        2.0,
+        6,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0.0,
+       19.5,
+       2.62
+      ],
+      "rotationDeg": [
+       0,
+       -180,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-upper-135",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        2.0,
+        6,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -1.853,
+       19.5,
+       1.853
+      ],
+      "rotationDeg": [
+       0,
+       -225,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-upper-180",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        2.0,
+        6,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -2.62,
+       19.5,
+       0.0
+      ],
+      "rotationDeg": [
+       0,
+       -270,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-upper-225",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        2.0,
+        6,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -1.853,
+       19.5,
+       -1.853
+      ],
+      "rotationDeg": [
+       0,
+       -315,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-upper-270",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        2.0,
+        6,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -0.0,
+       19.5,
+       -2.62
+      ],
+      "rotationDeg": [
+       0,
+       -360,
+       0
+      ]
+     }
+    },
+    {
+     "id": "tower-upper-315",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        2.0,
+        6,
+        0.25
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       1.853,
+       19.5,
+       -1.853
+      ],
+      "rotationDeg": [
+       0,
+       -405,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "ramp-f1",
+   "name": "Tower Ramp Flight",
+   "content": {
+    "type": "asset",
+    "asset": "tower-ramp-x",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     36,
+     1.5,
+     -13.45
+    ],
+    "rotationDeg": [
+     0,
+     0,
+     33.1
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "ramp-f1-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.35,
+        0.14,
+        5.6
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "ramp-f2",
+   "name": "Tower Ramp Flight",
+   "content": {
+    "type": "asset",
+    "asset": "tower-ramp",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     38.55,
+     4.5,
+     -16
+    ],
+    "rotationDeg": [
+     33.1,
+     0,
+     0
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "ramp-f2-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.35,
+        0.14,
+        5.6
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "ramp-f3",
+   "name": "Tower Ramp Flight",
+   "content": {
+    "type": "asset",
+    "asset": "tower-ramp-x",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     36,
+     7.5,
+     -18.55
+    ],
+    "rotationDeg": [
+     0,
+     0,
+     -33.1
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "ramp-f3-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.35,
+        0.14,
+        5.6
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "ramp-f4",
+   "name": "Tower Ramp Flight",
+   "content": {
+    "type": "asset",
+    "asset": "tower-ramp",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     33.45,
+     10.5,
+     -16
+    ],
+    "rotationDeg": [
+     -33.1,
+     0,
+     0
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "ramp-f4-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.35,
+        0.14,
+        5.6
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "ramp-f5",
+   "name": "Tower Ramp Flight",
+   "content": {
+    "type": "asset",
+    "asset": "tower-ramp-x",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     36,
+     13.5,
+     -13.45
+    ],
+    "rotationDeg": [
+     0,
+     0,
+     33.1
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "ramp-f5-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.35,
+        0.14,
+        5.6
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "ramp-f6",
+   "name": "Tower Ramp Flight",
+   "content": {
+    "type": "asset",
+    "asset": "tower-ramp",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     38.55,
+     16.5,
+     -16
+    ],
+    "rotationDeg": [
+     33.1,
+     0,
+     0
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "ramp-f6-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.35,
+        0.14,
+        5.6
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "ramp-f7",
+   "name": "Tower Ramp Flight",
+   "content": {
+    "type": "asset",
+    "asset": "tower-ramp-x",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     36,
+     19.5,
+     -18.55
+    ],
+    "rotationDeg": [
+     0,
+     0,
+     -33.1
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "ramp-f7-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.35,
+        0.14,
+        5.6
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "landing-1",
+   "name": "Tower Landing",
+   "content": {
+    "type": "asset",
+    "asset": "tower-landing",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     38.3,
+     3,
+     -13.7
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "landing-1-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.4,
+        0.16,
+        1.4
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -0.08,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "landing-2",
+   "name": "Tower Landing",
+   "content": {
+    "type": "asset",
+    "asset": "tower-landing",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     38.3,
+     6,
+     -18.3
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "landing-2-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.4,
+        0.16,
+        1.4
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -0.08,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "landing-3",
+   "name": "Tower Landing",
+   "content": {
+    "type": "asset",
+    "asset": "tower-landing",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     33.7,
+     9,
+     -18.3
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "landing-3-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.4,
+        0.16,
+        1.4
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -0.08,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "landing-4",
+   "name": "Tower Landing",
+   "content": {
+    "type": "asset",
+    "asset": "tower-landing",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     33.7,
+     12,
+     -13.7
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "landing-4-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.4,
+        0.16,
+        1.4
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -0.08,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "landing-5",
+   "name": "Tower Landing",
+   "content": {
+    "type": "asset",
+    "asset": "tower-landing",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     38.3,
+     15,
+     -13.7
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "landing-5-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.4,
+        0.16,
+        1.4
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -0.08,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "landing-6",
+   "name": "Tower Landing",
+   "content": {
+    "type": "asset",
+    "asset": "tower-landing",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     38.3,
+     18,
+     -18.3
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "landing-6-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.4,
+        0.16,
+        1.4
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -0.08,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "crown-floor",
+   "name": "Tower Crown Gallery",
+   "content": {
+    "type": "asset",
+    "asset": "crown-floor",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     36,
+     21,
+     -16
+    ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
+   "children": [
+    {
+     "id": "crown-collider",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Cylinder",
+       "dimensions": [
+        2.6,
+        0.18,
+        0
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0,
+       -0.09,
+       0
+      ]
+     }
+    },
+    {
+     "id": "crown-rail-0",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.95,
+        2.2,
+        0.15
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0.0,
+       2.4,
+       2.5
+      ],
+      "rotationDeg": [
+       0,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "id": "crown-rail-45",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.95,
+        2.2,
+        0.15
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       1.768,
+       2.4,
+       1.768
+      ],
+      "rotationDeg": [
+       0,
+       45,
+       0
+      ]
+     }
+    },
+    {
+     "id": "crown-rail-90",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.95,
+        2.2,
+        0.15
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       2.5,
+       2.4,
+       0.0
+      ],
+      "rotationDeg": [
+       0,
+       90,
+       0
+      ]
+     }
+    },
+    {
+     "id": "crown-rail-135",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.95,
+        2.2,
+        0.15
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       1.768,
+       2.4,
+       -1.768
+      ],
+      "rotationDeg": [
+       0,
+       135,
+       0
+      ]
+     }
+    },
+    {
+     "id": "crown-rail-180",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.95,
+        2.2,
+        0.15
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       0.0,
+       2.4,
+       -2.5
+      ],
+      "rotationDeg": [
+       0,
+       180,
+       0
+      ]
+     }
+    },
+    {
+     "id": "crown-rail-225",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.95,
+        2.2,
+        0.15
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -1.768,
+       2.4,
+       -1.768
+      ],
+      "rotationDeg": [
+       0,
+       225,
+       0
+      ]
+     }
+    },
+    {
+     "id": "crown-rail-270",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.95,
+        2.2,
+        0.15
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -2.5,
+       2.4,
+       -0.0
+      ],
+      "rotationDeg": [
+       0,
+       270,
+       0
+      ]
+     }
+    },
+    {
+     "id": "crown-rail-315",
+     "name": "Collider",
+     "components": {
+      "PhysicsBody": {
+       "state": "STATIC"
+      },
+      "PhysicsShape": {
+       "shape": "Box",
+       "dimensions": [
+        1.95,
+        2.2,
+        0.15
+       ]
+      }
+     },
+     "transform": {
+      "position": [
+       -1.768,
+       2.4,
+       1.768
+      ],
+      "rotationDeg": [
+       0,
+       315,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "ship",
+   "name": "The Harbor Brig",
+   "content": {
+    "type": "asset",
+    "asset": "ship-hull",
+    "castShadow": true,
+    "receiveShadow": true
+   },
+   "transform": {
+    "position": [
+     -31,
+     -1.9,
+     -17
+    ]
+   },
+   "components": {
+    "VesselShip": {}
+   },
+   "children": [
+    {
+     "id": "ship-deck",
+     "name": "Ship Deck",
+     "content": {
+      "type": "asset",
+      "asset": "ship-deck",
+      "receiveShadow": true
+     },
+     "transform": {
+      "position": [
+       0,
+       2.2,
+       0
+      ]
+     },
+     "components": {
+      "LocomotionEnvironment": {
+       "type": "kinematic"
+      }
+     }
+    },
+    {
+     "id": "ship-poop",
+     "name": "Poop Deck",
+     "content": {
+      "type": "asset",
+      "asset": "poop-deck",
+      "receiveShadow": true
+     },
+     "transform": {
+      "position": [
+       0,
+       3.35,
+       7.3
+      ]
+     },
+     "components": {
+      "LocomotionEnvironment": {
+       "type": "kinematic"
+      }
+     }
+    },
+    {
+     "id": "ship-helm",
+     "name": "Ship Helm",
+     "content": {
+      "type": "asset",
+      "asset": "helm-wheel",
+      "castShadow": true
+     },
+     "transform": {
+      "position": [
+       0,
+       3.35,
+       8.3
+      ]
+     },
+     "components": {
+      "HelmShip": {},
+      "RayInteractable": {}
+     }
+    },
+    {
+     "id": "ship-plank",
+     "name": "Ship Gangplank",
+     "content": {
+      "type": "asset",
+      "asset": "gangplank-x"
+     },
+     "transform": {
+      "position": [
+       -4.35,
+       2.0,
+       -3
+      ],
+      "rotationDeg": [
+       0,
+       0,
+       -8
+      ]
+     },
+     "components": {
+      "LocomotionEnvironment": {
+       "type": "kinematic"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "dinghy",
+   "name": "The Dinghy",
+   "content": {
+    "type": "asset",
+    "asset": "boat",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     3.9,
+     -1.15,
+     -19
+    ]
+   },
+   "components": {
+    "VesselDinghy": {}
+   },
+   "children": [
+    {
+     "id": "dinghy-deck",
+     "name": "Dinghy Floor",
+     "content": {
+      "type": "asset",
+      "asset": "dinghy-deck",
+      "receiveShadow": true
+     },
+     "transform": {
+      "position": [
+       0,
+       0.42,
+       0
+      ]
+     },
+     "components": {
+      "LocomotionEnvironment": {
+       "type": "kinematic"
+      }
+     }
+    },
+    {
+     "id": "dinghy-tiller",
+     "name": "Dinghy Tiller",
+     "content": {
+      "type": "asset",
+      "asset": "tiller"
+     },
+     "transform": {
+      "position": [
+       0,
+       0.42,
+       1.85
+      ]
+     },
+     "components": {
+      "HelmDinghy": {},
+      "RayInteractable": {}
+     }
+    }
+   ]
+  },
+  {
+   "id": "dinghy-plank",
+   "name": "Dinghy Boarding Plank",
+   "content": {
+    "type": "asset",
+    "asset": "gangplank-x"
+   },
+   "transform": {
+    "position": [
+     3.0,
+     -0.1,
+     -19
+    ],
+    "rotationDeg": [
+     0,
+     0,
+     -6
+    ],
+    "scale": 0.55
+   },
+   "components": {
+    "LocomotionEnvironment": {}
+   }
+  },
+  {
+   "id": "airship",
+   "name": "The Moored Airship",
+   "content": {
+    "type": "asset",
+    "asset": "airship-envelope",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     47.5,
+     -0.4,
+     -16
+    ]
+   },
+   "components": {
+    "VesselAirship": {}
+   },
+   "children": [
+    {
+     "id": "gondola",
+     "name": "Gondola",
+     "content": {
+      "type": "asset",
+      "asset": "gondola",
+      "castShadow": true
+     },
+     "transform": {
+      "position": [
+       0,
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "id": "gondola-deck",
+     "name": "Gondola Deck",
+     "content": {
+      "type": "asset",
+      "asset": "gondola-deck",
+      "receiveShadow": true
+     },
+     "transform": {
+      "position": [
+       0,
+       1.08,
+       0
+      ]
+     },
+     "components": {
+      "LocomotionEnvironment": {
+       "type": "kinematic"
+      }
+     }
+    },
+    {
+     "id": "flight-lever",
+     "name": "Flight Lever",
+     "content": {
+      "type": "asset",
+      "asset": "flight-lever"
+     },
+     "transform": {
+      "position": [
+       -0.55,
+       1.08,
+       -2.1
+      ]
+     },
+     "components": {
+      "HelmAirship": {},
+      "RayInteractable": {}
+     }
+    },
+    {
+     "id": "airship-plank",
+     "name": "Airship Gangplank",
+     "content": {
+      "type": "asset",
+      "asset": "gangplank-x"
+     },
+     "transform": {
+      "position": [
+       -1.7,
+       0.62,
+       0
+      ],
+      "rotationDeg": [
+       0,
+       0,
+       24
+      ],
+      "scale": 0.7
+     },
+     "components": {
+      "LocomotionEnvironment": {
+       "type": "kinematic"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "mooring-mast",
+   "name": "Mooring Mast",
+   "content": {
+    "type": "asset",
+    "asset": "mooring-mast",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     45.6,
+     0,
+     -16
+    ]
+   }
+  },
+  {
+   "id": "cog-01",
+   "name": "Brass Cog",
+   "content": {
+    "type": "asset",
+    "asset": "cog",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     -10.5,
+     0.1,
+     -4.5
+    ]
+   },
+   "components": {
+    "Cog": {},
+    "RayInteractable": {},
+    "DistanceGrabbable": {
+     "movementMode": "MoveFromTarget"
+    },
+    "PhysicsBody": {
+     "state": "DYNAMIC"
+    },
+    "PhysicsShape": {
+     "shape": "Cylinder",
+     "dimensions": [
+      0.34,
+      0.14,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "id": "cog-02",
+   "name": "Brass Cog",
+   "content": {
+    "type": "asset",
+    "asset": "cog",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     0.9,
+     0.1,
+     -16
+    ]
+   },
+   "components": {
+    "Cog": {},
+    "RayInteractable": {},
+    "DistanceGrabbable": {
+     "movementMode": "MoveFromTarget"
+    },
+    "PhysicsBody": {
+     "state": "DYNAMIC"
+    },
+    "PhysicsShape": {
+     "shape": "Cylinder",
+     "dimensions": [
+      0.34,
+      0.14,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "id": "cog-03",
+   "name": "Brass Cog",
+   "content": {
+    "type": "asset",
+    "asset": "cog",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     -24.8,
+     0.1,
+     -24
+    ]
+   },
+   "components": {
+    "Cog": {},
+    "RayInteractable": {},
+    "DistanceGrabbable": {
+     "movementMode": "MoveFromTarget"
+    },
+    "PhysicsBody": {
+     "state": "DYNAMIC"
+    },
+    "PhysicsShape": {
+     "shape": "Cylinder",
+     "dimensions": [
+      0.34,
+      0.14,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "id": "cog-04",
+   "name": "Brass Cog",
+   "content": {
+    "type": "asset",
+    "asset": "cog",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     13,
+     0.1,
+     13.2
+    ]
+   },
+   "components": {
+    "Cog": {},
+    "RayInteractable": {},
+    "DistanceGrabbable": {
+     "movementMode": "MoveFromTarget"
+    },
+    "PhysicsBody": {
+     "state": "DYNAMIC"
+    },
+    "PhysicsShape": {
+     "shape": "Cylinder",
+     "dimensions": [
+      0.34,
+      0.14,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "id": "cog-05",
+   "name": "Brass Cog",
+   "content": {
+    "type": "asset",
+    "asset": "cog",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     19.5,
+     0.1,
+     18.5
+    ]
+   },
+   "components": {
+    "Cog": {},
+    "RayInteractable": {},
+    "DistanceGrabbable": {
+     "movementMode": "MoveFromTarget"
+    },
+    "PhysicsBody": {
+     "state": "DYNAMIC"
+    },
+    "PhysicsShape": {
+     "shape": "Cylinder",
+     "dimensions": [
+      0.34,
+      0.14,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "id": "cog-06",
+   "name": "Brass Cog",
+   "content": {
+    "type": "asset",
+    "asset": "cog",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     -45,
+     0.1,
+     13.5
+    ]
+   },
+   "components": {
+    "Cog": {},
+    "RayInteractable": {},
+    "DistanceGrabbable": {
+     "movementMode": "MoveFromTarget"
+    },
+    "PhysicsBody": {
+     "state": "DYNAMIC"
+    },
+    "PhysicsShape": {
+     "shape": "Cylinder",
+     "dimensions": [
+      0.34,
+      0.14,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "id": "cog-07",
+   "name": "Brass Cog",
+   "content": {
+    "type": "asset",
+    "asset": "cog",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     38.3,
+     6.07,
+     -18.3
+    ]
+   },
+   "components": {
+    "Cog": {},
+    "RayInteractable": {},
+    "DistanceGrabbable": {
+     "movementMode": "MoveFromTarget"
+    },
+    "PhysicsBody": {
+     "state": "KINEMATIC"
+    },
+    "PhysicsShape": {
+     "shape": "Cylinder",
+     "dimensions": [
+      0.34,
+      0.14,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "id": "cog-08",
+   "name": "Brass Cog",
+   "content": {
+    "type": "asset",
+    "asset": "cog",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     38.3,
+     15.07,
+     -13.7
+    ]
+   },
+   "components": {
+    "Cog": {},
+    "RayInteractable": {},
+    "DistanceGrabbable": {
+     "movementMode": "MoveFromTarget"
+    },
+    "PhysicsBody": {
+     "state": "KINEMATIC"
+    },
+    "PhysicsShape": {
+     "shape": "Cylinder",
+     "dimensions": [
+      0.34,
+      0.14,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "id": "cog-09",
+   "name": "Brass Cog",
+   "content": {
+    "type": "asset",
+    "asset": "cog",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     36,
+     21.16,
+     -14.6
+    ]
+   },
+   "components": {
+    "Cog": {},
+    "RayInteractable": {},
+    "DistanceGrabbable": {
+     "movementMode": "MoveFromTarget"
+    },
+    "PhysicsBody": {
+     "state": "KINEMATIC"
+    },
+    "PhysicsShape": {
+     "shape": "Cylinder",
+     "dimensions": [
+      0.34,
+      0.14,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "id": "cog-10",
+   "name": "Brass Cog",
+   "content": {
+    "type": "asset",
+    "asset": "cog",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     -46,
+     0.8,
+     -39
+    ]
+   },
+   "components": {
+    "Cog": {},
+    "RayInteractable": {},
+    "DistanceGrabbable": {
+     "movementMode": "MoveFromTarget"
+    },
+    "PhysicsBody": {
+     "state": "KINEMATIC"
+    },
+    "PhysicsShape": {
+     "shape": "Cylinder",
+     "dimensions": [
+      0.34,
+      0.14,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "id": "cog-11",
+   "name": "Brass Cog",
+   "content": {
+    "type": "asset",
+    "asset": "cog",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     28,
+     0.1,
+     -4.5
+    ]
+   },
+   "components": {
+    "Cog": {},
+    "RayInteractable": {},
+    "DistanceGrabbable": {
+     "movementMode": "MoveFromTarget"
+    },
+    "PhysicsBody": {
+     "state": "DYNAMIC"
+    },
+    "PhysicsShape": {
+     "shape": "Cylinder",
+     "dimensions": [
+      0.34,
+      0.14,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "id": "cog-12",
+   "name": "Brass Cog",
+   "content": {
+    "type": "asset",
+    "asset": "cog",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     44,
+     0.1,
+     -9
+    ]
+   },
+   "components": {
+    "Cog": {},
+    "RayInteractable": {},
+    "DistanceGrabbable": {
+     "movementMode": "MoveFromTarget"
+    },
+    "PhysicsBody": {
+     "state": "DYNAMIC"
+    },
+    "PhysicsShape": {
+     "shape": "Cylinder",
+     "dimensions": [
+      0.34,
+      0.14,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "id": "cog-13",
+   "name": "Brass Cog",
+   "content": {
+    "type": "asset",
+    "asset": "cog",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     40,
+     -0.43,
+     -60
+    ]
+   },
+   "components": {
+    "Cog": {},
+    "RayInteractable": {},
+    "DistanceGrabbable": {
+     "movementMode": "MoveFromTarget"
+    },
+    "PhysicsBody": {
+     "state": "KINEMATIC"
+    },
+    "PhysicsShape": {
+     "shape": "Cylinder",
+     "dimensions": [
+      0.34,
+      0.14,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "id": "cog-14",
+   "name": "Brass Cog",
+   "content": {
+    "type": "asset",
+    "asset": "cog",
+    "castShadow": true
+   },
+   "transform": {
+    "position": [
+     -22.5,
+     0.1,
+     -10
+    ]
+   },
+   "components": {
+    "Cog": {},
+    "RayInteractable": {},
+    "DistanceGrabbable": {
+     "movementMode": "MoveFromTarget"
+    },
+    "PhysicsBody": {
+     "state": "DYNAMIC"
+    },
+    "PhysicsShape": {
+     "shape": "Cylinder",
+     "dimensions": [
+      0.34,
+      0.14,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "id": "key-light",
+   "name": "Dusk Key Light",
+   "transform": {
+    "position": [
+     -45,
+     34,
+     20
+    ],
+    "rotationDeg": [
+     -58,
+     -32,
+     0
+    ]
+   },
+   "components": {
+    "DirectionalLight": {
+     "color": [
+      1,
+      0.74,
+      0.47,
+      1
+     ],
+     "intensity": 1.7,
+     "castShadow": true,
+     "shadowMapSize": "2048",
+     "shadowCameraSize": 95,
+     "shadowCameraNear": 4,
+     "shadowCameraFar": 170,
+     "shadowRadius": 6,
+     "shadowBias": -0.0004,
+     "shadowNormalBias": 0.03
+    }
+   }
+  },
+  {
+   "id": "fill-light",
+   "name": "Dusk Fill",
+   "components": {
+    "HemisphereLight": {
+     "skyColor": [
+      0.36,
+      0.5,
+      0.62,
+      1
+     ],
+     "groundColor": [
+      0.08,
+      0.09,
+      0.11,
+      1
+     ],
+     "intensity": 0.5
+    }
+   }
+  },
+  {
+   "id": "point-tower",
+   "name": "Tower Glow",
+   "transform": {
+    "position": [
+     36,
+     24,
+     -10
+    ]
+   },
+   "components": {
+    "PointLight": {
+     "color": [
+      1,
+      0.72,
+      0.42,
+      1
+     ],
+     "intensity": 150,
+     "distance": 48,
+     "decay": 2
+    }
+   }
+  },
+  {
+   "id": "point-quay",
+   "name": "Quay Glow",
+   "transform": {
+    "position": [
+     0,
+     5,
+     -6
+    ]
+   },
+   "components": {
+    "PointLight": {
+     "color": [
+      1,
+      0.72,
+      0.42,
+      1
+     ],
+     "intensity": 45,
+     "distance": 36,
+     "decay": 2
+    }
+   }
+  },
+  {
+   "id": "point-market",
+   "name": "Market Glow",
+   "transform": {
+    "position": [
+     15,
+     4.4,
+     10
+    ]
+   },
+   "components": {
+    "PointLight": {
+     "color": [
+      1,
+      0.76,
+      0.46,
+      1
+     ],
+     "intensity": 60,
+     "distance": 30,
+     "decay": 2
+    }
+   }
+  },
+  {
+   "id": "point-market-in",
+   "name": "Market Lantern (interior)",
+   "transform": {
+    "position": [
+     15,
+     3.6,
+     16
+    ]
+   },
+   "components": {
+    "PointLight": {
+     "color": [
+      1,
+      0.72,
+      0.42,
+      1
+     ],
+     "intensity": 30,
+     "distance": 15,
+     "decay": 2
+    }
+   }
+  },
+  {
+   "id": "point-tower-in",
+   "name": "Tower Lantern (lower)",
+   "transform": {
+    "position": [
+     36,
+     7,
+     -16
+    ]
+   },
+   "components": {
+    "PointLight": {
+     "color": [
+      1,
+      0.72,
+      0.42,
+      1
+     ],
+     "intensity": 40,
+     "distance": 16,
+     "decay": 2
+    }
+   }
+  },
+  {
+   "id": "point-tower-in2",
+   "name": "Tower Lantern (upper)",
+   "transform": {
+    "position": [
+     36,
+     16,
+     -16
+    ]
+   },
+   "components": {
+    "PointLight": {
+     "color": [
+      1,
+      0.72,
+      0.42,
+      1
+     ],
+     "intensity": 40,
+     "distance": 16,
+     "decay": 2
+    }
+   }
+  },
+  {
+   "id": "point-warehouse-in",
+   "name": "Warehouse Lantern (interior)",
+   "transform": {
+    "position": [
+     -44,
+     4.5,
+     16
+    ]
+   },
+   "components": {
+    "PointLight": {
+     "color": [
+      1,
+      0.72,
+      0.42,
+      1
+     ],
+     "intensity": 30,
+     "distance": 13,
+     "decay": 2
+    }
+   }
+  }
+ ]
+}
