@@ -1806,6 +1806,22 @@
    }
   },
   {
+   "id": "plate-backdrop",
+   "name": "Far Shore Backdrop",
+   "framingRole": "support",
+   "content": {
+    "type": "asset",
+    "asset": "plate-backdrop"
+   },
+   "transform": {
+    "position": [
+     0,
+     7,
+     -126
+    ]
+   }
+  },
+  {
    "id": "lantern-q1",
    "name": "Lantern",
    "content": {
