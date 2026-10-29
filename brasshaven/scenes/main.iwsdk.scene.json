@@ -659,6 +659,9 @@
      22
     ]
    },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
    "children": [
     {
      "id": "clock-tower-collider",
@@ -701,6 +704,9 @@
      0,
      16
     ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    },
    "children": [
     {
@@ -870,6 +876,9 @@
      0
     ]
    },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
    "children": [
     {
      "id": "wb1-collider",
@@ -914,6 +923,9 @@
     ],
     "scale": 1.12
    },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
    "children": [
     {
      "id": "wa2-collider",
@@ -956,6 +968,9 @@
      0,
      16
     ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    },
    "children": [
     {
@@ -1053,6 +1068,9 @@
      0
     ]
    },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
    "children": [
     {
      "id": "wb2-collider",
@@ -1095,6 +1113,9 @@
      36
     ],
     "scale": 1.35
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    },
    "children": [
     {
@@ -1139,6 +1160,9 @@
     ],
     "scale": 1.28
    },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
    "children": [
     {
      "id": "wa3-collider",
@@ -1181,6 +1205,9 @@
      37
     ],
     "scale": 1.4
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    },
    "children": [
     {
@@ -1230,6 +1257,9 @@
     ],
     "scale": 1.3
    },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
    "children": [
     {
      "id": "wb4-collider",
@@ -1276,6 +1306,9 @@
      20,
      0
     ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    }
   },
   {
@@ -1292,6 +1325,9 @@
      0,
      -3.4
     ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    }
   },
   {
@@ -1313,6 +1349,9 @@
      -15,
      0
     ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    }
   },
   {
@@ -1334,6 +1373,9 @@
      25,
      0
     ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    }
   },
   {
@@ -1355,6 +1397,9 @@
      40,
      0
     ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    }
   },
   {
@@ -1371,6 +1416,9 @@
      0,
      -11.5
     ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    }
   },
   {
@@ -1387,6 +1435,9 @@
      0,
      -6.5
     ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    },
    "children": [
     {
@@ -1435,6 +1486,9 @@
      0
     ]
    },
+   "components": {
+    "LocomotionEnvironment": {}
+   },
    "children": [
     {
      "id": "crane-2-collider",
@@ -1481,6 +1535,9 @@
      10,
      0
     ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    }
   },
   {
@@ -1503,6 +1560,9 @@
      0
     ],
     "scale": 1.25
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    }
   },
   {
@@ -1524,6 +1584,9 @@
      0
     ],
     "scale": 0.85
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    }
   },
   {
@@ -1545,6 +1608,9 @@
      0
     ],
     "scale": 1.1
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    }
   },
   {
@@ -1716,6 +1782,9 @@
      -20,
      0
     ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    },
    "children": [
     {
@@ -2100,6 +2169,9 @@
      0,
      -16
     ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    },
    "children": [
     {
@@ -3685,6 +3757,9 @@
     ]
    },
    "components": {
+    "LocomotionEnvironment": {
+     "type": "kinematic"
+    },
     "VesselShip": {}
    },
    "children": [
@@ -3793,6 +3868,9 @@
     ]
    },
    "components": {
+    "LocomotionEnvironment": {
+     "type": "kinematic"
+    },
     "VesselDinghy": {}
    },
    "children": [
@@ -3878,6 +3956,9 @@
     ]
    },
    "components": {
+    "LocomotionEnvironment": {
+     "type": "kinematic"
+    },
     "VesselAirship": {}
    },
    "children": [
@@ -3895,6 +3976,11 @@
        0,
        0
       ]
+     },
+     "components": {
+      "LocomotionEnvironment": {
+       "type": "kinematic"
+      }
      }
     },
     {
@@ -3979,6 +4065,9 @@
      0,
      -16
     ]
+   },
+   "components": {
+    "LocomotionEnvironment": {}
    }
   },
   {
@@ -4655,6 +4744,31 @@
      "distance": 16,
      "decay": 2
     }
+   }
+  },
+  {
+   "id": "crown-beacon",
+   "name": "Crown Beacon",
+   "transform": {
+    "position": [
+     36,
+     23.8,
+     -16
+    ]
+   },
+   "components": {
+    "PointLight": {
+     "color": [
+      1,
+      0.76,
+      0.46,
+      1
+     ],
+     "intensity": 0,
+     "distance": 55,
+     "decay": 1.8
+    },
+    "Beacon": {}
    }
   },
   {
